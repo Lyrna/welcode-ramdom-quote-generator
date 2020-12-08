@@ -3683,6 +3683,10 @@ const colors = [
 
 let currentQuote = '';
 let currentAuthor = '';
+let button = document.getElementById('new-quote');
+
+  button.addEventListener("click", getRandomColor);
+  button.addEventListener("click", getRandomQuote);
 
 function getRandomColor() {
   const randomColor = colors[
@@ -3693,9 +3697,6 @@ function getRandomColor() {
   document.body.style.backgroundColor = randomColor;
   document.getElementById('wrapper').style.color = randomColor;
   document.getElementById('new-quote').style.backgroundColor = randomColor;
-
-  newQuote.addEventListener("click", setBg);
-  newQuote.addEventListener("click", setColor);
 
   // Your code above
 }
